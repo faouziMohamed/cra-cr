@@ -1,0 +1,29 @@
+mathjax/
+mathjax/**/**
+my_page.code-workspace
+.vs/
+.vscode/
+.vs/**
+.vscode/**
+
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+img/arc-acem-round-small.png
+.idea/**
+index_*
+.idea/**
+.github/
+compte-rendu.code-workspace
