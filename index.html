@@ -16,50 +16,71 @@
     <body>
         <div class="root" id="app">
             <span id="top"></span>
-            <nav class="main-header-nav flex">
-                <a href="./index.html" class="main-nav-left-items flex">
-                    <img
-                        src="img/cra-icon.png"
-                        alt="icon of cra"
-                        class="acem-icon"
-                    />
-                    <div class="nav-title flex">
-                        <span class="nav-title-item cra">CRA</span>
-                        <span class="nav-title-item acem">ACEM</span>
-                        <span class="nav-title-item kenitra">KENITRA</span>
-                    </div>
-                </a>
+            <header class="app-header">
+                <nav class="app-header-nav flex">
+                    <a href="./index.html" class="app-header-left-items flex">
+                        <img
+                            src="img/cra-icon.png"
+                            alt="icon of cra"
+                            class="acem-icon"
+                        />
+                        <div class="nav-title flex">
+                            <span class="nav-title-item cra">CRA</span>
+                            <span class="nav-title-item acem">ACEM</span>
+                            <span class="nav-title-item kenitra">KENITRA</span>
+                        </div>
+                    </a>
 
-                <div class="right-item flex">
-                    <div class="main-nav-right-items flex">
-                        <label id="switch" class="switch flex">
-                            <input type="checkbox" id="slider" />
-                            <span class="slider round flex"></span>
-                        </label>
-
-                        <a href="#" class="github-btn" id="github">
-                            <i class="github-icon fab fa-github"></i>
-                        </a>
+                    <div class="right-item flex">
+                        <div class="app-header-right-items flex">
+                            <label id="switch" class="switch flex">
+                                <input type="checkbox" id="slider" />
+                                <span class="slider round flex"></span>
+                            </label>
+                            <a
+                                href="#"
+                                class="app-header-github-btn"
+                                id="app-github-link"
+                            >
+                                <i class="app-header-github-icon fab fa-github">
+                                </i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </header>
 
             <!--Main content-->
-            <main class="main main-content flex">
-                <aside id="left-aside" class="left-aside">
-                    <nav id="aside-nav" class="aside-nav">
-                        <h1 class="title-aside-nav">Les Grandes lignes</h1>
-                        <ul id="ul-aside-nav" class="ul-aside-nav"></ul>
-                    </nav>
-                </aside>
+            <main class="app-content main-content flex">
+                <!--Section containing the table of content-->
+                <section
+                    id="app-left-side"
+                    class="app-left-side app-table-of-content"
+                >
+                    <div class="toc-wrapper flex">
+                        <h1 class="table-of-content-title">
+                            Les Grandes lignes
+                        </h1>
+                        <nav class="table-of-content-nav">
+                            <ul
+                                id="table-of-content-list"
+                                class="table-of-content-list"
+                            >
+                                <!--List items added programmatically by JS-->
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
 
-                <article class="main-article">
-                    <div class="article-content">
+                <!--This section wrap the only content (article)  of the page-->
+                <div class="content-wrapper">
+                    <article class="main-article">
                         <header class="main-header">
                             <h1 class="main-title">
                                 Club de recherche Académique
                             </h1>
                         </header>
+
                         <section class="main-section" role="doc-abstract">
                             <h2 class="text-title">Introduction</h2>
                             <p>
@@ -112,6 +133,7 @@
                                 chaque activité réalisée.
                             </p>
                         </section>
+
                         <nav class="nav-btn-wrapper flex">
                             <button
                                 class="nav-btn-item prev-btn flex"
@@ -130,20 +152,22 @@
                                 </i>
                             </button>
                         </nav>
-                        <footer>
-                            <p>
-                                Coded by
-                                <a
-                                    href="https://github.com/faouziMohamed/"
-                                    target="_blank"
-                                    title="Facebook account"
-                                >
-                                    FAOUZI MOHAMED
-                                </a>
-                            </p>
+                        <footer class="app-footer">
+                            <aside class="about-author">
+                                <p>
+                                    Coded by
+                                    <a
+                                        href="https://github.com/faouziMohamed/"
+                                        target="_blank"
+                                        title=" Go to GitHub Profile"
+                                    >
+                                        FAOUZI MOHAMED
+                                    </a>
+                                </p>
+                            </aside>
                         </footer>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </main>
         </div>
 

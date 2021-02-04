@@ -60,16 +60,6 @@ function newElement(name, attributes = {}, text = "") {
     return node;
 }
 
-function preventDefaultToEmptyLink() {
-    document.querySelector("#github").href =
-        "https://github.com/faouziMohamed/faouzimohamed.github.io";
-    document.querySelectorAll("a[href='#']").forEach((a) => {
-        a.addEventListener("click", (e) => {
-            e.preventDefault();
-        });
-    });
-}
-
 function tweakTableOfCOntent() {
     let toc = newElement("i", {
         class: "fas fa-stream fa-chevron-right",

@@ -1,5 +1,15 @@
 import { newElement } from "./nav.mjs";
 
+function handleEmptyLinks() {
+    document.querySelector("#app-github-link").href =
+        "https://github.com/arcAcemK/cra-cr";
+    document.querySelectorAll("a[href='#']").forEach((a) => {
+        a.addEventListener("click", (e) => {
+            e.preventDefault();
+        });
+    });
+}
+
 function insertAfter(el, ref) {
     ref.parentNode.insertBefore(el, ref.nextSibling);
 }
@@ -20,7 +30,7 @@ function addLiToUl(ul, node, id) {
 }
 
 function createListLeftNav() {
-    let ul = document.querySelector("#ul-aside-nav");
+    let ul = document.querySelector("#table-of-content-list");
     let title = document.querySelectorAll(".text-title");
     let node = null,
         n = 1,
@@ -75,28 +85,8 @@ function createListLeftNav() {
     }
 }
 
-function clickOnInternalLinkCSSTransition() {
-    let anchors = document.querySelectorAll(".main a[href*='#']:not(#top)");
-    let navBar = document.querySelector(".main-header-nav");
-    let app = document.querySelector("#app");
-
-    anchors.forEach((anchor) => {
-        anchor.addEventListener("click", function hideNavBar() {
-            navBar.classList.add("hidden", "opacity_0");
-        });
-    });
-
-    ["touchstart", "wheel"].forEach((eventName) => {
-        app.addEventListener(eventName, function showNavBar() {
-            if (navBar.classList.contains("hidden")) {
-                navBar.classList.remove("hidden", "opacity_0");
-            }
-        });
-    });
-}
-
 function executeBody() {
     createListLeftNav();
-    clickOnInternalLinkCSSTransition();
+    handleEmptyLinks();
 }
-export { createListLeftNav, clickOnInternalLinkCSSTransition, executeBody };
+export { createListLeftNav, executeBody };

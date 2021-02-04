@@ -104,6 +104,7 @@
 
 :root {
     --nav-bar-height: 80px;
+    --top-offset: 20px;
 }
 * {
     box-sizing: border-box;
@@ -130,7 +131,7 @@ body,
     overflow: hidden;
 }
 /* The menu */
-.main-header-nav {
+.app-header-nav {
     font-family: "Aquire";
     font-size: 18px;
     position: fixed;
@@ -147,7 +148,7 @@ body,
     transition: background-color ease-out 0.8s, color ease 1.5s;
 }
 
-.main-nav-left-items {
+.app-header-left-items {
     text-decoration: none;
     justify-content: center;
     flex-basis: 100px;
@@ -191,55 +192,63 @@ body,
     flex-basis: 100px;
 }
 
-.main-nav-right-items {
+.app-header-right-items {
     justify-content: space-between;
     align-items: stretch;
     flex-basis: 95px;
 }
 
-.github-icon {
+.app-header-github-icon {
     font-size: 2.01em;
     color: var(--github-fill);
 }
 
-.github-icon:hover {
+.app-header-github-icon:hover {
     color: var(--github-hover-fill);
 }
 
-.main-content {
+.app-content {
     position: relative;
-    top: 0;
-    display: flex;
-    align-items: stretch;
     height: 100%;
     width: 100%;
+    top: 0;
+    padding-top: var(--nav-bar-height);
+    z-index: 100;
+
+    background-color: var(--main-article-bg);
     font-family: -apple-system, BlinkMacSystemFont, Ubuntu, "Segoe UI", Roboto,
         Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.left-aside {
-    font-family: "Chilanka Regular"; /*Imported font*/
-    position: relative;
-    height: 100%;
-    z-index: 100;
     overflow: hidden;
-    flex: 15%;
-    top: var(--nav-bar-height);
-    font-size: 100%;
-    background-color: red /*var(--main-aside-bg)*/;
-    transition: all 0.5s ease-in-out;
+
+    align-items: stretch;
 }
 
-.aside-nav {
+.app-left-side,
+.app-table-of-content {
     position: relative;
+    top: 0;
     height: 100%;
-    flex-basis: 100%;
+    font-size: 100%;
+    flex: 15%;
+    transition: all 0.5s ease-in-out;
+
+    overflow: hidden;
+    font-family: "Chilanka Regular"; /*Imported font*/
     background-color: var(--main-aside-nav-bg);
     color: var(--main-aside-nav-color);
-    overflow-y: auto;
+}
 
-    display: flex;
+.toc-wrapper {
+    position: relative;
+    top: 0;
+    height: 100%;
+    flex: 100%;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .hidden {
@@ -254,29 +263,29 @@ body,
     opacity: 0;
 }
 
-.title-aside-nav {
+.app-left-side-title {
     padding: 10px 0 0 0px;
     text-align: center;
     font-size: 160%;
 }
 
-.aside-nav li {
-    list-style-type: none;
-}
-
-.ul-aside-nav {
+.table-of-content-list {
     display: flex;
     flex-direction: column;
     line-height: 2;
     align-items: flex-start;
 }
 
-.aside-nav > ul > li li {
+.table-of-content-list > li li {
     margin-left: -27px;
     margin-bottom: 2px;
 }
 
-.aside-nav a {
+.table-of-content-nav li {
+    list-style-type: none;
+}
+
+.table-of-content-nav a {
     color: var(--main-aside-nav-color);
     text-decoration: none;
     padding: 0;
@@ -288,49 +297,44 @@ body,
     padding-bottom: 2px;
 }
 
-.aside-nav li a:hover {
+.table-of-content-nav li a:hover {
     padding-bottom: 1px;
 }
 
-.aside-nav > ul > li > a:hover {
+.table-of-content-list > li > a:hover {
     /* co lor: var(--nav-aside-hv-color); */
     background-color: var(--aside-a-1-bg);
     border-bottom: var(--aside-a-1-bt);
 }
 
-.aside-nav > ul > li li > a:hover {
+.table-of-content-list > li li > a:hover {
     /* color: var(--nav-aside--li-hv-color); */
     background-color: var(--aside-a-2-bg);
     border-bottom: var(--aside-a-2-bt);
 }
 
-.aside-nav > ul > li ul > li li > a:hover {
+.table-of-content-list > li ul > li li > a:hover {
     /* color: var(--nav-aside--li-li-hv-color); */
     background-color: var(--aside-a-3-bg);
     border-bottom: var(--aside-a-3-bt);
 }
 
-.aside-nav > ul {
+.table-of-content-list {
     padding: 0 15px 3px 5px;
 }
-
-.main-article {
+.content-wrapper {
     position: relative;
-    z-index: 100;
     flex: 60%;
-    top: calc(var(--nav-bar-height));
-    padding: 8px;
-    background-color: var(--main-article-bg);
-    color: var(--main-text-color);
-    scroll-behavior: smooth;
+    padding: 30px 8px;
+    /* padding-top: 50px ; */
     scrollbar-color: rgb(21, 29, 2) rgb(180, 153, 109);
     overflow: auto;
 }
 
-.article-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.main-article {
+    position: relative;
+    color: var(--main-text-color);
+    scroll-behavior: smooth;
 }
 
 .main-header {
@@ -404,8 +408,8 @@ body,
     outline: red;
 }
 
-.next-btn {
-}
+/* .next-btn {
+} */
 
 /* .nav-btn-text {
     display: flex;
