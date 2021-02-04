@@ -10,6 +10,8 @@
 
 @font-face {
     font-family: "Ubuntu";
+    style: normal;
+    weight: 400;
     src: url("../fonts/Ubuntu-R.ttf");
 }
 
@@ -25,10 +27,8 @@
     --main-list-a-bg-hover: rgb(4, 12, 20);
     --submenu-li-a-bg: rgb(28, 41, 46);
     --submenu-a-bg-hover: #010e0f;
-    --github-img: url("../img/github_logo.png");
     --github-fill: rgb(196, 195, 195);
     --github-hover-fill: rgb(78, 86, 88);
-    --home-img: url("../img/house_white.png");
     --home-fill: rgb(227, 246, 252);
     /*}*/
 
@@ -66,10 +66,8 @@
     --main-list-a-bg-hover: rgb(1, 25, 31);
     --submenu-li-a-bg: rgb(0, 32, 29);
     --submenu-a-bg-hover: rgb(0, 20, 18);
-    --github-img: url("../img/github_logo.png");
     --github-fill: rgb(45, 173, 146);
     --github-hover-fill: rgb(25, 97, 100);
-    --home-img: url("../img/house_white.png");
     --home-fill: rgb(103, 214, 214);
     /*}*/
 

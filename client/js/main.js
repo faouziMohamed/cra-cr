@@ -30,5 +30,5 @@ void (function main() {
     displayModalContent();
     // executeMainNavMenu();
     executeBody();
-    include("img-slide.js", false);
+    // include("img-slide.js", false);
 })();
