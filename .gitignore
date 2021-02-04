@@ -25,5 +25,8 @@ img/arc-acem-round-small.png
 .idea/**
 index_*
 .idea/**
-.github/
+.github/**
 compte-rendu.code-workspace
+node_modules/**
+dist/**
+.cache/**
