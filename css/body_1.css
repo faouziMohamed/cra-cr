@@ -418,7 +418,10 @@ body {
         top: var(--nav-bar-height);
         z-index: var(--default-z-index);
     }
-
+    .burger-wrapper {
+        opacity: 1;
+        transform: translate(0);
+    }
     .table-of-content-closed {
         transform: translateX(-100%);
     }

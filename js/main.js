@@ -31,12 +31,13 @@ void (function main() {
     // executeMainNavMenu();
     executeBody();
     include("img-slide.js", false);
+
+    document.querySelector(".burger-check").checked = false;
+    document
+        .querySelector(".app-table-of-content")
+        .classList.add("table-of-content-closed");
 })();
 
-/*
- * //TODO: Handle the oppening and closing of the table of content when the burger
- * //TODO: Menu is clicked
- * **/
 document.querySelector(".burger-check").addEventListener("click", (e) => {
     e.stopPropagation();
 
@@ -46,7 +47,6 @@ document.querySelector(".burger-check").addEventListener("click", (e) => {
 function openOrClose_tableOfContents() {
     let burgerCheckBox = document.querySelector(".app-table-of-content");
     console.log("Ok here", burgerCheckBox.classList);
-    // if (burgerCheckBox.classList.contains("table-of-content-opened")) {
-    // }
+
     burgerCheckBox.classList.toggle("table-of-content-closed");
 }
