@@ -86,6 +86,7 @@ function createListLeftNav() {
 function configureBurgerMenu() {
     let burgerCheck = document.querySelector(".burger-check");
     let tableOfCOntent = document.querySelector(".app-table-of-content");
+    let mainContentContainer = document.querySelector(".content-wrapper");
     // Set closed by default the table of content when screen is less than 675px
     //burgerCheck is a checkbox hidden(input)
     burgerCheck.checked = false;
@@ -95,6 +96,11 @@ function configureBurgerMenu() {
     //TOC = Table of Contents
     burgerCheck.addEventListener("change", function openCloseTOC() {
         tableOfCOntent.classList.toggle("table-of-content-closed");
+    });
+
+    mainContentContainer.addEventListener("click", function closeTOC() {
+        tableOfCOntent.classList.add("table-of-content-closed");
+        burgerCheck.checked = false;
     });
 }
 
