@@ -32,3 +32,21 @@ void (function main() {
     executeBody();
     include("img-slide.js", false);
 })();
+
+/*
+ * //TODO: Handle the oppening and closing of the table of content when the burger
+ * //TODO: Menu is clicked
+ * **/
+document.querySelector(".burger-check").addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    openOrClose_tableOfContents();
+});
+
+function openOrClose_tableOfContents() {
+    let burgerCheckBox = document.querySelector(".app-table-of-content");
+    console.log("Ok here", burgerCheckBox.classList);
+    // if (burgerCheckBox.classList.contains("table-of-content-opened")) {
+    // }
+    burgerCheckBox.classList.toggle("table-of-content-closed");
+}
