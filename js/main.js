@@ -1,20 +1,41 @@
-import { newElement, executeMainNavMenu } from "./nav.mjs";
+import { enableThemes } from "./themes.js";
 
-import { setThemeAfterPageLoaded } from "./switch.mjs";
+import { displayModalContent } from "./modals.js";
 
-import { displayModalContent } from "./modal-things.mjs";
-
-import { executeBody } from "./body.mjs";
+import { executeBody, newElement } from "./body.js";
 
 function include(fileName, isModule = false) {
-    let prefix, type;
-    if (document.title !== "La classification automatique") {
+    let addJsNodeToHTML = async (file) => {
+        fetch(file)
+            .then((resolve) => {
+                return resolve.text();
+            })
+            .then((htmlDoc) => {
+                appendScriptToBody(htmlDoc, fileName, isModule);
+            });
+    };
+    return addJsNodeToHTML("../index.html");
+}
+
+void (function main() {
+    // include("modals.js", true);
+    enableThemes();
+    displayModalContent();
+    executeBody();
+})();
+function appendScriptToBody(htmlDoc, fileName, isModule) {
+    let doc = new DOMParser().parseFromString(htmlDoc, "text/html");
+
+    let prefix = null,
+        type = null;
+
+    if (document.title !== doc.title) {
         prefix = "../js/";
     } else {
         prefix = "js/";
     }
 
-    isModule === true ? (type = "module") : (type = "text/javascript");
+    type = isModule === true ? "module" : "text/javascript";
 
     document.body.appendChild(
         newElement("script", {
@@ -23,30 +44,4 @@ function include(fileName, isModule = false) {
             defer: "true",
         })
     );
-}
-
-void (function main() {
-    setThemeAfterPageLoaded();
-    displayModalContent();
-    // executeMainNavMenu();
-    executeBody();
-    include("img-slide.js", false);
-
-    document.querySelector(".burger-check").checked = false;
-    document
-        .querySelector(".app-table-of-content")
-        .classList.add("table-of-content-closed");
-})();
-
-document.querySelector(".burger-check").addEventListener("click", (e) => {
-    e.stopPropagation();
-
-    openOrClose_tableOfContents();
-});
-
-function openOrClose_tableOfContents() {
-    let burgerCheckBox = document.querySelector(".app-table-of-content");
-    console.log("Ok here", burgerCheckBox.classList);
-
-    burgerCheckBox.classList.toggle("table-of-content-closed");
 }
