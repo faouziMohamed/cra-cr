@@ -413,16 +413,16 @@ body {
 }
 
 @media screen and (max-width: 675px) {
-    .app-left-side {
-        position: absolute;
-        top: var(--nav-bar-height);
-        z-index: var(--default-z-index);
-    }
     .burger-wrapper {
         opacity: 1;
         transform: translate(0);
     }
+
+    .app-table-of-content {
+        position: fixed;
+        top: var(--nav-bar-height);
+    }
     .table-of-content-closed {
-        transform: translateX(-100%);
+        transform: translate(-100%);
     }
 }
