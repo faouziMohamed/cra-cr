@@ -1,14 +1,21 @@
+/*Enxtends theme variable*/
+.theme-dark {
+    --border-color: #91c500;
+    --symbol-color: rgb(0, 255, 34);
+}
+
+.theme-light {
+    --border-color: rgb(0, 255, 34);
+    --symbol-color: #91c500;
+}
+
 .switch {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 45px;
 }
-
-/* Hide default HTML checkbox */
-.switch input {
-    display: none;
-}
+/*End Enxtending theme variables*/
 
 /* The slider */
 .slider {
@@ -60,17 +67,77 @@ input:checked + .slider::before {
     background-position: center;
 }
 
-/*The to top object*/
-.theme-dark {
-    --border-color: #91c500;
-    --symbol-color: rgb(0, 255, 34);
+/**
+* The burger menu icon in small screen max-width <= 675px
+* this icon is used to open and close the table of content 
+* in small screen.
+* The oppening and closing of the table of content is handled
+* by javascript (see the file body.js)**/
+
+/*{*/
+.burger-wrapper {
+    --burger-wrapper-bg-color: rgb(9, 29, 27);
+    --burger-wrapper-bg-color-hover: rgb(1, 18, 21);
+    --burger-menu-bg-color: rgb(6, 196, 114);
+    --burger-menu-bg-color-hover: rgb(196, 177, 6);
+    position: absolute;
+    cursor: pointer;
+    /**--nav-bar-height declared in body.js**/
+    top: var(--nav-bar-height);
+    z-index: 101;
+    background-color: var(--burger-wrapper-bg-color);
+    padding: 8px 25px 15px 15px;
+    border-radius: 0 0 60%;
 }
 
-.theme-light {
-    --border-color: rgb(0, 255, 34);
-    --symbol-color: #91c500;
+.burger-wrapper:hover {
+    background-color: var(--burger-wrapper-bg-color-hover);
 }
 
+.burger-menu {
+    position: relative;
+    top: 2px;
+    display: block;
+    width: 40px;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: var(--burger-menu-bg-color);
+    border-radius: 3px;
+    transition: transform ease 0.2s;
+}
+
+.burger-menu::before {
+    box-shadow: 0 10px 0 var(--burger-menu-bg-color);
+    margin-bottom: 16px;
+}
+
+.burger-menu:hover::before,
+.burger-menu:hover::after {
+    background-color: var(--burger-menu-bg-color-hover);
+}
+
+.burger-menu:hover::before {
+    box-shadow: 0 10px 0 var(--burger-menu-bg-color-hover);
+}
+
+.burger-check:checked + .burger-menu::before {
+    box-shadow: 0 0 0 var(--burger-menu-bg-color);
+    transform: translateY(10px) rotate(45deg);
+}
+
+.burger-check:checked + .burger-menu::after {
+    transform: translateY(-10px) rotate(495deg);
+}
+/*End burger icon in small screen max-width <= 675*/
+/*}*/
+
+/*Begin The to top object button: go to top button*/
+/*{*/
 .to-top {
     color: var(--symbol-color);
     padding-top: 1.8em;
@@ -110,3 +177,5 @@ input:checked + .slider::before {
     transform: rotate(360deg);
     border-color: red;
 }
+/*End The to top object*/
+/*}*/

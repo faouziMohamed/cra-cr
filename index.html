@@ -34,7 +34,11 @@
                     <div class="right-item flex">
                         <div class="app-header-right-items flex">
                             <label id="switch" class="switch flex">
-                                <input type="checkbox" id="slider" />
+                                <input
+                                    type="checkbox"
+                                    id="slider"
+                                    class="hidden"
+                                />
                                 <span class="slider round flex"></span>
                             </label>
                             <a
@@ -49,10 +53,14 @@
                     </div>
                 </nav>
             </header>
-
+            <label class="burger-wrapper">
+                <input class="burger-check hidden" type="checkbox" />
+                <div class="burger-menu"></div>
+            </label>
             <!--Main content-->
             <main class="app-content main-content flex">
                 <!--Section containing the table of content-->
+
                 <section
                     id="app-left-side"
                     class="app-left-side app-table-of-content"
@@ -79,6 +87,7 @@
                             <h1 class="main-title">
                                 Club de recherche Académique
                             </h1>
+                            <p class="main-sub-title">ACEM Kénitra</p>
                         </header>
 
                         <section class="main-section" role="doc-abstract">
@@ -153,6 +162,54 @@
                             </button>
                         </nav>
                         <footer class="app-footer">
+                            <section class="useful-link">
+                                <h1 class="useful-link-title">Liens utiles</h1>
+                                <section class="external-link-container">
+                                    <h2 class="cra-social">
+                                        Club Académique de Recherche de l'ACEM
+                                        Kénitra
+                                    </h2>
+                                    <a
+                                        href="https://www.facebook.com/Club-de-Recherche-Acad%C3%A9mique-310130176356323/"
+                                        class="cra-fb"
+                                    >
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a
+                                        href="https://github.com/arcAcemK/cra-cr"
+                                        class="cra-github-link"
+                                    >
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </section>
+                            </section>
+                            <section class="github-related">
+                                <h1 class="github-issues-pulls">
+                                    Améliorer cette page
+                                </h1>
+                                <p class="issues-text">
+                                    Si vous trouver un problème sur le site ou
+                                    vous voulez demander une amélioration,
+                                    faites votre réclamation sur
+                                    <a
+                                        href="https://github.com/arcAcemK/cra-cr/issues"
+                                        class="issue-github"
+                                    >
+                                        github/issues
+                                    </a>
+                                </p>
+
+                                <p class="pull-request-text">
+                                    Pour soumettre une modification veuillez
+                                    faire votre démande sur
+                                    <a
+                                        href="https://github.com/arcAcemK/cra-cr/pulls"
+                                        class="pull-request-github"
+                                    >
+                                        github/pull request</a
+                                    >
+                                </p>
+                            </section>
                             <aside class="about-author">
                                 <p>
                                     Coded by
