@@ -386,7 +386,7 @@ body {
 
 .nav-btn-wrapper.flex {
     align-self: stretch;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch;
     padding: 0;
     margin: 0;
@@ -425,4 +425,125 @@ body {
     .table-of-content-closed {
         transform: translate(-100%);
     }
+}
+
+.app-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+    border-radius: 3px;
+    font-size: 90%;
+    color: rgb(6, 17, 20);
+    background-color: rgb(31, 46, 46);
+    --footer-item-border: 1px solid rgb(84, 143, 92);
+}
+
+.app-footer a {
+    text-decoration: none;
+    color: rgb(161, 12, 37);
+    font-weight: 900;
+}
+
+.app-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-top-item {
+    background-color: rgb(148, 192, 168);
+    margin: 0 0 2px 0;
+}
+
+.app-footer-content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    /* background-color: rgb(17, 88, 88); */
+}
+
+.app-footer-section {
+    padding: 6px 10px;
+    flex-grow: 1;
+    /* flex-shrink: 0; */
+    flex-basis: 185px;
+}
+
+.app-footer-section-title {
+    color: rgb(5, 32, 39);
+    padding: 0;
+    margin: 4px 0 0 0;
+    border-bottom: 1px solid rgb(180, 218, 211);
+}
+/* .github-related-title {
+    margin: 0;
+}
+.useful-link-title {
+    margin: 0;
+} */
+
+.app-footer-useful-link {
+    display: flex;
+    flex-direction: column;
+}
+.app-footer-github-related {
+    text-align: justify;
+}
+
+.app-footer-copyright {
+    flex-grow: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.cra-social-link-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cra-social-title {
+    font-size: 90%;
+    margin: 3px 0 0 5px;
+}
+
+.cra-social-links-wrapper {
+    width: 50%;
+    padding: 1px 9px;
+    margin: 0;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.a-cra-social-link {
+    font-size: 1.7em;
+    color: rgb(13, 63, 128);
+}
+
+.cra-social-link-item {
+    display: block;
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cra-social-link-item .cra-social-fb {
+    color: rgb(19, 45, 116);
+}
+
+.cra-social-link-item .cra-social-github {
+    color: rgb(2, 38, 49);
+}
+
+.cra-social-link-item .cra-social-fb:hover {
+    color: rgb(3, 4, 87);
+}
+
+.cra-social-link-item .cra-social-github:hover {
+    color: rgb(30, 80, 95);
 }

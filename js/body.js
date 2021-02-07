@@ -103,7 +103,28 @@ function configureBurgerMenu() {
         burgerCheck.checked = false;
     });
 }
+function appendScriptToBody(htmlDoc, fileName, isModule) {
+    let doc = new DOMParser().parseFromString(htmlDoc, "text/html");
 
+    let prefix = null,
+        type = null;
+
+    if (document.title !== doc.title) {
+        prefix = "../js/";
+    } else {
+        prefix = "js/";
+    }
+
+    type = isModule === true ? "module" : "text/javascript";
+
+    document.body.appendChild(
+        newElement("script", {
+            src: `${prefix}${fileName}`,
+            type: `${type}`,
+            defer: "true",
+        })
+    );
+}
 export function newElement(name, attributes = {}, text = "") {
     let node = document.createElement(name);
     const keys = Object.getOwnPropertyNames(attributes);
@@ -119,6 +140,19 @@ export function newElement(name, attributes = {}, text = "") {
 
 export function insertAfter(elToInsert, reference) {
     reference.parentNode.insertBefore(elToInsert, reference.nextSibling);
+}
+
+export function include(fileName, isModule = false) {
+    let addJsNodeToHTML = async (file) => {
+        fetch(file)
+            .then((resolve) => {
+                return resolve.text();
+            })
+            .then((htmlDoc) => {
+                appendScriptToBody(htmlDoc, fileName, isModule);
+            });
+    };
+    return addJsNodeToHTML("../index.html");
 }
 
 export function executeBody() {
