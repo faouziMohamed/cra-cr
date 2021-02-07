@@ -25,6 +25,7 @@
     --github-icon-hover-color: rgb(78, 86, 88);
     /*}*/
 
+    /*Color in the body{*/
     --main-text-color: rgb(193, 209, 206);
     --color-link: #faa;
     --main-article-bg: rgb(1, 17, 36);
@@ -48,6 +49,29 @@
     --aside-a-2-bt: 1px solid rgb(119, 131, 13);
     --aside-a-3-bg: rgba(4, 23, 24, 0.658);
     --aside-a-3-bt: 1px solid rgb(153, 73, 36);
+
+    /* Color in navigation button (previous and next){ */
+    --app-nav-btn-text-color: #919631d2;
+    --app-footer-text-color: rgb(8, 26, 31);
+    --app-nav-btn-background-color: rgb(4, 17, 13);
+    --app-nav-btn-border-color: rgb(6, 110, 110);
+    --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
+    /*End Color in navigation button (previous and next)} */
+
+    /* All color in the footer { */
+    --app-footer-link-default-text-color: rgb(161, 12, 37);
+    --app-footer-background-color: rgb(31, 46, 46);
+    --app-footer-top-item-background-color: rgb(148, 192, 168);
+    --app-footer-section-title-border-bottom-color: rgb(180, 218, 211);
+    --app-footer-section-title-color: rgb(12, 38, 44);
+    --app-cra-social-link-default-color: rgb(13, 63, 128);
+    --app-footer-cra-fb-link-color: rgb(19, 45, 116);
+    --app-footer-cra-github-link-color: rgb(2, 38, 49);
+    --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
+    --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
+    /*End All color in the footer { */
+
+    /*}End colors in the body tag*/
 }
 
 .theme-light {
@@ -81,7 +105,28 @@
     --aside-a-2-bt: 1px solid rgb(119, 131, 13);
     --aside-a-3-bg: rgba(11, 8, 19, 0.623);
     --aside-a-3-bt: 1px solid rgb(155, 97, 22);
-    /*}*/
+    /* Color in navigation button (previous and next){ */
+    --app-nav-btn-text-color: #919631d2;
+    --app-footer-text-color: rgb(8, 26, 31);
+    --app-nav-btn-background-color: rgb(4, 17, 13);
+    --app-nav-btn-border-color: rgb(6, 110, 110);
+    --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
+    /*End Color in navigation button (previous and next)} */
+
+    /* All color in the footer { */
+    --app-footer-link-default-text-color: rgb(161, 12, 37);
+    --app-footer-background-color: rgb(31, 46, 46);
+    --app-footer-top-item-background-color: rgb(148, 192, 168);
+    --app-footer-section-title-border-bottom-color: rgb(180, 218, 211);
+    --app-footer-section-title-color: rgb(12, 38, 44);
+    --app-cra-social-link-default-color: rgb(13, 63, 128);
+    --app-footer-cra-fb-link-color: rgb(19, 45, 116);
+    --app-footer-cra-github-link-color: rgb(2, 38, 49);
+    --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
+    --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
+    /*End All color in the footer { */
+
+    /*}End colors in the body tag*/
 }
 
 :root {
@@ -405,10 +450,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(4, 17, 13);
-    color: #919631d2;
-    border: 1px solid rgb(6, 110, 110);
-    box-shadow: 1px 1px 5px rgb(0, 4, 21);
+    background-color: var(--app-nav-btn-background-color);
+    color: var(--app-nav-btn-text-color);
+    border: 1px solid var(--app-nav-btn-border-color);
+    box-shadow: 1px 1px 5px var(--app-nav-btn-boxshadow-color);
     outline: red;
 }
 
@@ -437,14 +482,13 @@ body {
     padding: 0;
     border-radius: 3px;
     font-size: 90%;
-    color: rgb(6, 17, 20);
-    background-color: rgb(31, 46, 46);
-    --footer-item-border: 1px solid rgb(84, 143, 92);
+    color: var(--app-footer-text-color);
+    background-color: var(--app-footer-background-color);
 }
 
 .app-footer a {
     text-decoration: none;
-    color: rgb(161, 12, 37);
+    color: var(--app-footer-link-default-text-color);
     font-weight: 900;
 }
 
@@ -453,7 +497,7 @@ body {
 }
 
 .footer-top-item {
-    background-color: rgb(148, 192, 168);
+    background-color: var(--app-footer-top-item-background-color);
     margin: 0 0 2px 0;
 }
 
@@ -461,21 +505,19 @@ body {
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
-    /* background-color: rgb(17, 88, 88); */
 }
 
 .app-footer-section {
     padding: 6px 10px;
     flex-grow: 1;
-    /* flex-shrink: 0; */
     flex-basis: 185px;
 }
 
 .app-footer-section-title {
-    color: rgb(5, 32, 39);
+    color: var(--app-footer-section-title-color);
     padding: 0;
     margin: 4px 0 0 0;
-    border-bottom: 1px solid rgb(180, 218, 211);
+    border-bottom: 1px solid var(--app-footer-section-title-border-bottom-color);
 }
 /* .github-related-title {
     margin: 0;
@@ -522,7 +564,7 @@ body {
 
 .a-cra-social-link {
     font-size: 1.7em;
-    color: rgb(13, 63, 128);
+    color: var(--app-footer-cra-social-link-default-color);
 }
 
 .cra-social-link-item {
@@ -533,17 +575,17 @@ body {
     margin: 0;
 }
 .cra-social-link-item .cra-social-fb {
-    color: rgb(19, 45, 116);
+    color: var(--app-footer-cra-fb-link-color);
 }
 
 .cra-social-link-item .cra-social-github {
-    color: rgb(2, 38, 49);
+    color: var(--app-footer-cra-github-link-color);
 }
 
 .cra-social-link-item .cra-social-fb:hover {
-    color: rgb(3, 4, 87);
+    color: var(--app-footer-cra-fb-link-hover-color);
 }
 
 .cra-social-link-item .cra-social-github:hover {
-    color: rgb(30, 80, 95);
+    color: var(--app-footer-cra-github-link-hover-color);
 }
