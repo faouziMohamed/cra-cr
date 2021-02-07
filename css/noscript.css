@@ -1,57 +1,174 @@
-#no-script-before-main {
+:root {
+    /*Color in the body{*/
+    --main-text-color: rgb(193, 209, 206);
+    --color-link: #faa;
+
+    --main-section-h2-color: #18d6bd;
+    --main-section-h3-color: #79df93;
+    --main-section-h4-color: #d1e49e;
+    --main-section-border-color: #081a27;
+    --main-section-h2-conclusion-color: rgb(0, 189, 142);
+    --table-border: #657473;
+
+    --table-of-content-bg: rgb(7, 11, 19);
+    --table-of-content-color: #d4dada;
+
+    /* Color in navigation button (previous and next){ */
+    --app-nav-btn-text-color: #919631d2;
+    --app-footer-text-color: rgb(8, 26, 31);
+    --app-nav-btn-background-color: rgb(4, 17, 13);
+    --app-nav-btn-border-color: rgb(6, 110, 110);
+    --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
+    /*End Color in navigation button (previous and next)} */
+
+    /* All color in the footer { */
+    --app-footer-link-default-text-color: rgb(161, 12, 37);
+    --app-footer-background-color: rgb(31, 46, 46);
+    --app-footer-section-title-color: rgb(12, 38, 44);
+    --app-cra-social-link-default-color: rgb(13, 63, 128);
+    --app-footer-cra-fb-link-color: rgb(19, 45, 116);
+    --app-footer-cra-github-link-color: rgb(2, 38, 49);
+    --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
+    --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
+    /*End All color in the footer { */
+
+    /*}End colors in the body tag*/
+}
+
+/*Modified colors*/
+:root {
+    --noscript-layout-height: 30px;
+    --noscript-layout-text-color: rgb(168, 231, 210);
+    --noscript-layout-background-color: rgb(182, 80, 39);
+    /*every color in the header {*/
+    --app-header-nav-bg: rgb(49, 85, 77);
+    --app-header-offset: 10px;
+    --github-icon-color: rgb(247, 253, 230);
+    --github-icon-hover-color: rgb(255, 218, 138);
+    /*}*/
+
+    --main-article-bg: rgb(17, 67, 70);
+    --main-title-color: rgb(236, 163, 3);
+    --main-title-bg: rgb(26, 44, 59);
+    --main-section-bg: rgb(11, 29, 39);
+
+    /*Burger object */
+    --burger-wrapper-bg-color: rgb(57, 94, 86);
+    --burger-wrapper-bg-color-hover: rgb(2, 77, 100);
+    --burger-menu-bg-color: rgb(6, 142, 196);
+    --burger-menu-bg-color-hover: rgb(196, 66, 6);
+    --burger-menu-checked-bg: rgb(224, 18, 180);
+
+    --app-footer-top-item-background-color: rgb(86, 153, 144);
+    --app-footer-section-title-border-bottom-color: rgb(135, 209, 191);
+}
+
+.theme-light {
+    /*Every color in the header {*/
+    --app-header-nav-bg: rgb(1, 37, 46);
+    --github-icon-color: rgb(45, 173, 146);
+    --github-icon-hover-color: rgb(25, 97, 100);
+    /*}*/
+
+    /*Color in the body{*/
+    --main-text-color: rgb(0, 20, 19);
+    --color-link: rgb(230, 0, 0);
+    --main-article-bg: rgb(3, 143, 120);
+    --main-title-color: rgb(161, 179, 121);
+    --main-title-bg: rgb(35, 82, 71);
+    --main-section-bg: rgb(162, 199, 199);
+    --main-section-h2-color: #050761;
+    --main-section-h3-color: #033636;
+    --main-section-h4-color: #005b6b;
+    --main-section-border-color: #58f4f4;
+    --main-section-h2-conclusion-color: rgb(10, 95, 29);
+    --table-border: #657473;
+
+    --table-of-content-bg: rgb(8, 45, 46);
+    --table-of-content-color: rgb(192, 255, 247);
+    --table-of-content-title1-hover-color: rgb(234, 240, 145);
+    --table-of-content-title2-hover-color: rgb(255, 166, 0);
+    --aside-a-1-bg: rgba(1, 16, 26, 0.658);
+    --aside-a-1-bt: 1px solid rgb(36, 153, 108);
+    --aside-a-2-bg: rgba(8, 17, 15, 0.658);
+    --aside-a-2-bt: 1px solid rgb(119, 131, 13);
+    --aside-a-3-bg: rgba(11, 8, 19, 0.623);
+    --aside-a-3-bt: 1px solid rgb(155, 97, 22);
+    /* Color in navigation button (previous and next){ */
+    --app-nav-btn-text-color: #919631d2;
+    --app-footer-text-color: rgb(8, 26, 31);
+    --app-nav-btn-background-color: rgb(4, 17, 13);
+    --app-nav-btn-border-color: rgb(6, 110, 110);
+    --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
+    /*End Color in navigation button (previous and next)} */
+
+    /* All color in the footer { */
+    --app-footer-link-default-text-color: rgb(161, 12, 37);
+    --app-footer-background-color: rgb(31, 46, 46);
+    --app-footer-top-item-background-color: rgb(148, 192, 168);
+    --app-footer-section-title-border-bottom-color: rgb(180, 218, 211);
+    --app-footer-section-title-color: rgb(12, 38, 44);
+    --app-cra-social-link-default-color: rgb(13, 63, 128);
+    --app-footer-cra-fb-link-color: rgb(19, 45, 116);
+    --app-footer-cra-github-link-color: rgb(2, 38, 49);
+    --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
+    --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
+    /*End All color in the footer { */
+
+    /*}End colors in the body tag*/
+}
+
+.noscript-layout {
+    z-index: 101;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--noscript-layout-height);
+    top: 0;
+    left: 0;
+    right: 0;
+    color: var(--noscript-layout-text-color);
+    background: var(--noscript-layout-background-color);
+    padding: 20px;
+}
+
+.no-script-text {
+    flex-grow: 1;
     text-align: center;
     margin: 0;
     z-index: inherit;
 }
 
-#noscript-layout {
-    z-index: 100000;
-    text-align: center;
-    position: fixed;
-    padding: 5px 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    color: rgb(168, 231, 210);
-    background: rgb(182, 80, 39);
-}
-
-nav#header-nav {
-    display: block;
-    position: fixed;
-    background-color: rgb(73, 104, 97);
-    top: 29px;
-    left: 0;
-    right: 0;
-    padding: 0;
-    z-index: 100;
-    color: rgb(14, 9, 0);
-}
-
 #switch {
     display: none;
 }
-
-.submenu a:hover {
-    background-color: rgb(75, 127, 141);
+.app-header-nav {
+    background-color: var(--app-header-nav-bg);
+    top: calc(var(--noscript-layout-height) + var(--app-header-offset));
 }
 
-ul#main-list>li>a:hover {
-    background-color: rgb(1, 25, 31);
-    color: bisque;
+.burger-wrapper {
+    top: calc(
+        var(--nav-bar-height) + var(--noscript-layout-height) +
+            var(--app-header-offset)
+    );
 }
 
-body {
-    background-color: rgb(180, 175, 175);
-    color: rgb(10, 10, 10);
+.app-content {
+    padding-top: calc(var(--nav-bar-height) + var(--noscript-layout-height));
+    z-index: var(--default-z-index);
+    background-color: var(--main-article-bg);
 }
 
-ul#main-list>li:hover .submenu {
-    display: block;
-    background-color: rgb(88, 95, 97);
+.app-left-side,
+.app-table-of-content {
+    background-color: var(--table-of-content-bg);
+    color: var(--table-of-content-color);
 }
 
-ul#main-list>li:first-child:hover {
-    display: block;
-    fill: antiquewhite;
+@media screen and (max-width: 675px) {
+    .app-table-of-content {
+        display: none;
+    }
 }

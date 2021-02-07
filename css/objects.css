@@ -9,6 +9,13 @@
     --symbol-color: #91c500;
 }
 
+:root {
+    --burger-wrapper-bg-color: rgb(7, 27, 23);
+    --burger-wrapper-bg-color-hover: rgb(2, 15, 19);
+    --burger-menu-bg-color: rgb(6, 196, 114);
+    --burger-menu-bg-color-hover: rgb(196, 177, 6);
+    --burger-menu-checked-bg: rgb(255, 0, 64);
+}
 .switch {
     flex-wrap: wrap;
     justify-content: center;
@@ -76,10 +83,6 @@ input:checked + .slider::before {
 
 /*{*/
 .burger-wrapper {
-    --burger-wrapper-bg-color: rgb(7, 27, 23);
-    --burger-wrapper-bg-color-hover: rgb(2, 15, 19);
-    --burger-menu-bg-color: rgb(6, 196, 114);
-    --burger-menu-bg-color-hover: rgb(196, 177, 6);
     opacity: 0;
     transform: translate(-100%);
     transition-property: opacity, transform;
@@ -111,7 +114,6 @@ input:checked + .slider::before {
     background-color: var(--burger-menu-bg-color);
     border-radius: 3px;
     transition: transform ease 0.2s;
-    --burger-menu-checked-bg: rgb(255, 0, 64);
 }
 
 .burger-menu::before {

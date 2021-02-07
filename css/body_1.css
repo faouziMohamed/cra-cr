@@ -18,6 +18,8 @@
     src: url("../fonts/Chilanka-Regular.ttf");
 }
 
+/* TODO: add colors for dark themes */
+
 .theme-dark {
     /*every color in the header {*/
     --app-header-nav-bg: rgb(6, 18, 32);
