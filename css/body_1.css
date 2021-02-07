@@ -22,26 +22,26 @@
 
 .theme-dark {
     /*every color in the header {*/
-    --app-header-nav-bg: rgb(6, 18, 32);
-    --github-icon-color: rgb(196, 195, 195);
-    --github-icon-hover-color: rgb(78, 86, 88);
+    --app-header-nav-bg: rgb(1, 13, 27);
+    --github-icon-color: rgb(149, 201, 181);
+    --github-icon-hover-color: rgb(210, 246, 255);
     /*}*/
 
     /*Color in the body{*/
-    --main-text-color: rgb(193, 209, 206);
+    --main-text-color: rgb(166, 216, 208);
     --color-link: #faa;
-    --main-article-bg: rgb(1, 17, 36);
+    --main-article-bg: rgb(7, 70, 62);
     --main-title-color: rgb(236, 163, 3);
-    --main-title-bg: rgb(46, 54, 61);
-    --main-section-bg: rgb(11, 29, 39);
+    --main-title-bg: rgb(9, 46, 45);
+    --main-section-bg: rgb(2, 28, 32);
     --main-section-h2-color: #18d6bd;
     --main-section-h3-color: #79df93;
     --main-section-h4-color: #d1e49e;
-    --main-section-border-color: #081a27;
+    --main-section-border-color: #033632;
     --main-section-h2-conclusion-color: rgb(0, 189, 142);
     --table-border: #657473;
 
-    --table-of-content-bg: rgb(7, 11, 19);
+    --table-of-content-bg: rgb(2, 20, 26);
     --table-of-content-color: #d4dada;
     --table-of-content-title1-hover-color: rgb(221, 255, 100);
     --table-of-content-title2-hover-color: rgb(152, 228, 137);
@@ -61,11 +61,12 @@
     /*End Color in navigation button (previous and next)} */
 
     /* All color in the footer { */
+
     --app-footer-link-default-text-color: rgb(161, 12, 37);
     --app-footer-background-color: rgb(31, 46, 46);
-    --app-footer-top-item-background-color: rgb(148, 192, 168);
-    --app-footer-section-title-border-bottom-color: rgb(180, 218, 211);
-    --app-footer-section-title-color: rgb(12, 38, 44);
+    --app-footer-top-item-background-color: rgb(65, 156, 141);
+    --app-footer-section-title-border-bottom-color: rgb(83, 204, 174);
+    --app-footer-section-title-color: rgb(2, 31, 37);
     --app-cra-social-link-default-color: rgb(13, 63, 128);
     --app-footer-cra-fb-link-color: rgb(19, 45, 116);
     --app-footer-cra-github-link-color: rgb(2, 38, 49);
@@ -84,16 +85,16 @@
     /*}*/
 
     /*Color in the body{*/
-    --main-text-color: rgb(0, 20, 19);
+    --main-text-color: rgb(4, 27, 31);
     --color-link: rgb(230, 0, 0);
-    --main-article-bg: rgb(3, 143, 120);
+    --main-article-bg: rgb(2, 114, 99);
     --main-title-color: rgb(161, 179, 121);
     --main-title-bg: rgb(35, 82, 71);
-    --main-section-bg: rgb(162, 199, 199);
+    --main-section-bg: rgb(112, 182, 182);
     --main-section-h2-color: #050761;
     --main-section-h3-color: #033636;
     --main-section-h4-color: #005b6b;
-    --main-section-border-color: #58f4f4;
+    --main-section-border-color: #0f8b77;
     --main-section-h2-conclusion-color: rgb(10, 95, 29);
     --table-border: #657473;
 
@@ -135,6 +136,7 @@
     --nav-bar-height: 80px;
     --top-offset: 20px;
     --default-z-index: 100;
+    --main-header-items-text-alignment: center;
 }
 * {
     box-sizing: border-box;
@@ -374,8 +376,6 @@ body {
     margin-bottom: 15px;
     align-self: stretch;
     padding: 20px 0;
-    /* --main-header-items-margin-right: 50px; */
-    --main-header-items-text-alignment: center;
 }
 
 .main-title {
@@ -398,7 +398,6 @@ body {
     text-align: var(--main-header-items-text-alignment);
     margin: 0 var(--main-header-items-margin-right) 0 0;
     padding: 0;
-    /* padding: 0 0 15px 50px; */
 }
 
 .main-section {
@@ -411,7 +410,7 @@ body {
     letter-spacing: 0.05em;
     line-height: 1.39em;
     transition: background-color ease-in-out 0.19s;
-    /* transition: all 0.8s; */
+    box-shadow: 0 1px 4px rgb(8, 51, 56);
 }
 
 .main-section:first-child {
